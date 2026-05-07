@@ -3,6 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    
+    <script>
+        // Check if the user has been here before
+        if (localStorage.getItem('hasVisited')) {
+            // If they have, send them to a 404 page
+            window.location.href = "404.html"; 
+        } else {
+            // If not, set the flag so they can't see it again
+            localStorage.setItem('hasVisited', 'true');
+        }
+    </script>
+
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .content { border: 2px solid #333; padding: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>This is your one-time access page.</h1>
+        <p>If you refresh or come back later, you'll be redirected to a 404 error.</p>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Page</title>
 </head>
 <body>
